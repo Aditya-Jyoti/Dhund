@@ -1,0 +1,25 @@
+repos:
+    - repo: https://github.com/golangci/golangci-lint
+      rev: v2.6.2
+      hooks:
+          - id: golangci-lint
+
+    - repo: local
+      hooks:
+          - id: gofmt
+            name: go fmt
+            entry: bash -c "go fmt ./..."
+            language: system
+            types: [go]
+
+          - id: goimports
+            name: goimports
+            entry: bash -c "goimports -w ."
+            language: system
+            types: [go]
+
+          - id: gotest
+            name: go test
+            entry: bash -c "go test ./... -count=1"
+            language: system
+            types: [go]

@@ -1,0 +1,21 @@
+version: "2"
+
+run:
+    timeout: 5m
+
+linters:
+    default: standard
+    enable:
+        - asciicheck
+
+formatters:
+    enable:
+        - goimports
+        - gofmt
+
+output:
+    formats:
+        text:
+            print-linter-name: true
+            print-issued-lines: true
+            colors: true

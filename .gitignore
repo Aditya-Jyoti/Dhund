@@ -1,0 +1,16 @@
+# Binaries
+/bin/
+/dist/
+/out/
+*.exe
+
+# Go build artefacts
+*.test
+*.out
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
